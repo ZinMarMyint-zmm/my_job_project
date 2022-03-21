@@ -9,7 +9,7 @@
   </div>
   
   <router-view/>
-  <button>Redirect</button>
+  <button @click="redirect">Redirect</button>
   <button @click="goForward">Go forward</button>
   <button @click="goBack">Go back</button>
 </template>
@@ -22,6 +22,9 @@ export default{
     },
     goForward(){
       this.$router.go(1);
+    },
+    redirect(){
+      this.$router.push({name: 'home'});
     }
   }
 }
