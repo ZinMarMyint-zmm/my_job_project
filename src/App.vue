@@ -1,12 +1,10 @@
 <template>
-  <div>
-    <nav>
+  <nav>
     <router-link :to="{name: 'home'}">Home</router-link> |
     <router-link :to="{name: 'about'}">About</router-link>|
     <router-link :to="{name: 'job'}">Jobs</router-link>
     
   </nav>
-  </div>
   
   <router-view/>
   <button @click="redirect">Redirect</button>
@@ -47,9 +45,13 @@ nav {
 nav a {
   font-weight: bold;
   color: #2c3e50;
+  border-radius: 5px;
+  text-decoration: none;
 }
 
 nav a.router-link-exact-active {
-  color: #42b983;
+  color: white;
+  background-color: crimson;
+  padding: 10px;
 }
 </style>
